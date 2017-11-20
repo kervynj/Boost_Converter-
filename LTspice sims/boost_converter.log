@@ -1,0 +1,68 @@
+Circuit: * C:\Electronics Trunk\Boost Converter\Boost_Converter-\LTspice sims\boost_converter.asc
+
+Direct Newton iteration failed to find .op point.  (Use ".option noopiter" to skip.)
+Starting Gmin stepping
+Gmin = 10
+Gmin = 1.07374
+Gmin = 0.115292
+Gmin = 0.0123794
+Gmin = 0.00132923
+Gmin = 0.000142725
+vernier = 0.5
+vernier = 0.25
+vernier = 0.125
+vernier = 0.0625
+vernier = 0.03125
+vernier = 0.015625
+Gmin = 0.000113293
+vernier = 0.0208333
+vernier = 0.0277778
+Gmin = 0.000107791
+vernier = 0.037037
+Gmin = 9.94352e-005
+vernier = 0.0493827
+vernier = 0.0658435
+Gmin = 8.71551e-005
+vernier = 0.0877914
+vernier = 0.117055
+Gmin = 7.07818e-005
+vernier = 0.156073
+Gmin = 5.06025e-005
+vernier = 0.208098
+vernier = 0.277464
+Gmin = 2.93775e-005
+vernier = 0.369952
+vernier = 0.493269
+Gmin = 1.25786e-005
+vernier = 0.657691
+Gmin = 3.28524e-006
+vernier = 0.876922
+vernier = 1
+Gmin = 4.39756e-007
+Gmin = 4.72185e-008
+Gmin = 5.07005e-009
+Gmin = 5.44392e-010
+Gmin = 5.84537e-011
+Gmin = 6.27641e-012
+Gmin = 6.73925e-013
+Gmin = 0
+Gmin stepping succeeded in finding the operating point.
+
+
+Date: Sun Nov 19 21:00:24 2017
+Total elapsed time: 20.353 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 682649
+traniter = 681451
+tranpoints = 200172
+accept = 153254
+rejected = 46918
+matrix size = 38
+fillins = 48
+solver = Normal
+Matrix Compiler1: 4.20 KB object code size  6.7/2.7/[1.0]
+Matrix Compiler2: 4.36 KB object code size  1.9/2.2/[1.3]
+
