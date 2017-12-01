@@ -1,44 +1,47 @@
 * C:\Electronics Trunk\Boost Converter\Boost_Converter-\LTspice sims\boost_converter.asc
-XU1 0 N008 Vcc -Vcc -k*Vc level.2 Avol=1Meg GBW=10Meg Slew=10Meg ilimit=25m rail=0 Vos=0 phimargin=45 en=0 enk=0 in=0 ink=0 Rin=500Meg
-R1 N010 N008 10k
-R2 -k*Vc N008 60k
+XU1 0 N010 Vcc -Vcc -k*Vc level.2 Avol=1Meg GBW=10Meg Slew=10Meg ilimit=25m rail=0 Vos=0 phimargin=45 en=0 enk=0 in=0 ink=0 Rin=500Meg
+R1 N012 N010 10k
+R2 -k*Vc N010 60k
 V2 Vcc 0 15v
 R3 Vc 0 450
-C1 Vc 0 10µF IC=12V
+C1 Vc 0 10µF IC=17V
 D1 Vsw Vc 1N4148
-M1 Vsw N002 0 0 IRF510
+M1 Vsw N003 0 0 IRF510
 L1 Vs vpos 2.5mH
 V3 Vs 0 5
-V1 -Vcc 0 -15v
-C2 N008 0 47nF
+V1 -Vcc 0 -15V
 R4 Vsw vpos 0.1
-XU2 N009 N003 Vcc -Vcc -k*IL level.2 Avol=1Meg GBW=10Meg Slew=10Meg ilimit=25m rail=0 Vos=0 phimargin=45 en=0 enk=0 in=0 ink=0 Rin=500Meg
-R5 N003 Vsw 20k
-R6 Vpos N009 20k
-R7 N003 -k*IL 100k
-R8 0 N009 100k
-XU3 Vcm N004 Vcc -Vcc sum level.2 Avol=1Meg GBW=10Meg Slew=10Meg ilimit=25m rail=0 Vos=0 phimargin=45 en=0 enk=0 in=0 ink=0 Rin=500Meg
-R9 N007 N004 100k
-R10 sum N004 100k
-R11 N006 -k*IL 1k
-R12 N006 -k*Vc 1k
-XU4 saw N005 Vs 0 D_in level.2 Avol=1Meg GBW=10Meg Slew=10Meg ilimit=25m rail=0 Vos=0 phimargin=45 en=0 enk=0 in=0 ink=0 Rin=500Meg
-R15 N010 Vc 10k
-R16 N010 -Vout 10k
-V6 -Vout 0 -15V
+XU2 N011 N004 Vcc -Vcc -k*IL level.2 Avol=1Meg GBW=10Meg Slew=10Meg ilimit=25m rail=0 Vos=0 phimargin=45 en=0 enk=0 in=0 ink=0 Rin=500Meg
+R5 N004 Vsw 20k
+R6 Vpos N011 20k
+R7 N004 -k*IL 100k
+R8 0 N011 100k
+XU3 Vcm N005 Vcc -Vcc sum level.2 Avol=1Meg GBW=10Meg Slew=10Meg ilimit=25m rail=0 Vos=0 phimargin=45 en=0 enk=0 in=0 ink=0 Rin=500Meg
+R10 sum N005 10k
+R11 N008 N007 1k
+R12 N008 -k*Vc 1k
+XU4 saw N006 Vs 0 D_in level.2 Avol=1Meg GBW=10Meg Slew=10Meg ilimit=25m rail=0 Vos=0 phimargin=45 en=0 enk=0 in=0 ink=0 Rin=500Meg
+R15 N012 Vc 10k
+R16 N012 -Vout 10k
+V6 -Vout 0 -10V
 R17 Vcc Vcm 10k
 R18 Vcm 0 2k
-R19 N007 Vcm 100k
 C6 Vcm 0 100nF
-R20 D_in N005 1Meg
-R21 N005 sum 1k
-R22 N002 D_in 100
-R13 N001 Duty_in 10k
-R14 saw N001 10k
-C3 N001 0 1nF
-C8 saw 0 1nF
+R20 D_in N006 1Meg
+R21 N006 sum 1k
+R22 N003 D_in 100
+R13 N001 Duty_in 1k
+R14 saw N001 1k
+C3 N001 0 10nF
+C8 saw 0 10nF
 V4 Duty_in 0 PULSE(0 5 0 1n 1n {ton} {period})
-C4 N007 N006 1nF
+R9 N005 N009 10k
+R19 Vcm N009 100k
+C5 Vcm 0 4.7nF
+R23 Vc N002 500
+M2 N002 switch 0 0 AO6408
+V5 switch 0 PULSE(0 5V 20m 1u 1u 40ms)
+C2 N009 N008 1nF
 .model D D
 .lib C:\Users\Administrator\Documents\LTspiceXVII\lib\cmp\standard.dio
 .model NMOS NMOS
@@ -49,7 +52,7 @@ C4 N007 N006 1nF
 .param ton = duty*period
 .param duty=0.667
 .param Il_eqm = 5/(450*(1-duty)^2)
-.ic I(L1)=0.1
+.IC I(L1)=0.1
 * Signal Generator
 * Boost Converter
 * State-Space Regulator
@@ -57,7 +60,7 @@ C4 N007 N006 1nF
 * ILdelta*(-K1)
 * Vcdelta*(-K2)+ILdelta*(-K1)
 * -[Vcdelta*(-K2)+ILdelta*(-K1)]
-.tran 40m
+.tran 80m
 .lib UniversalOpamps2.sub
 .backanno
 .end

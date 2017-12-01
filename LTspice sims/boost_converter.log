@@ -1,5 +1,6 @@
 Circuit: * C:\Electronics Trunk\Boost Converter\Boost_Converter-\LTspice sims\boost_converter.asc
 
+WARNING: Less than two connections to node N007.  This node is used by R11.
 Direct Newton iteration failed to find .op point.  (Use ".option noopiter" to skip.)
 Starting Gmin stepping
 Gmin = 10
@@ -8,66 +9,34 @@ Gmin = 0.115292
 Gmin = 0.0123794
 Gmin = 0.00132923
 Gmin = 0.000142725
-vernier = 0.5
-vernier = 0.25
-vernier = 0.125
-vernier = 0.0625
-vernier = 0.03125
-vernier = 0.015625
-vernier = 0.0078125
-Gmin = 0.000113957
-vernier = 0.0104167
-Gmin = 0.000111321
-vernier = 0.0138889
-vernier = 0.0185185
-Gmin = 0.000107033
-vernier = 0.0246913
-vernier = 0.0329218
-Gmin = 0.000100543
-vernier = 0.0438957
-Gmin = 9.11325e-005
-vernier = 0.0585276
-vernier = 0.0780367
-Gmin = 7.73139e-005
-vernier = 0.104049
-vernier = 0.138732
-Gmin = 5.95587e-005
-vernier = 0.184976
-Gmin = 3.96204e-005
-vernier = 0.246634
-vernier = 0.328846
-Gmin = 2.01725e-005
-vernier = 0.438461
-vernier = 0.584614
-Gmin = 7.02452e-006
-vernier = 0.779486
-Gmin = 1.39868e-006
-vernier = 1
-Gmin = 1.50182e-007
-Gmin = 1.61257e-008
-Gmin = 1.73148e-009
-Gmin = 1.85916e-010
-Gmin = 1.99626e-011
-Gmin = 2.14347e-012
-Gmin = 2.30153e-013
+Gmin = 1.5325e-005
+Gmin = 1.6455e-006
+Gmin = 1.76685e-007
+Gmin = 1.89714e-008
+Gmin = 2.03704e-009
+Gmin = 2.18725e-010
+Gmin = 2.34854e-011
+Gmin = 2.52173e-012
+Gmin = 2.70769e-013
 Gmin = 0
 Gmin stepping succeeded in finding the operating point.
 
+Heightened Def Con from 0.0406901 to 0.0406901
 
-Date: Tue Nov 21 11:36:23 2017
-Total elapsed time: 17.340 seconds.
+Date: Wed Nov 29 12:43:22 2017
+Total elapsed time: 24.187 seconds.
 
 tnom = 27
 temp = 27
 method = modified trap
-totiter = 643486
-traniter = 642209
-tranpoints = 192607
-accept = 144673
-rejected = 47934
-matrix size = 38
-fillins = 50
+totiter = 673020
+traniter = 672620
+tranpoints = 201255
+accept = 153757
+rejected = 47499
+matrix size = 46
+fillins = 37
 solver = Normal
-Matrix Compiler1: 4.40 KB object code size  6.1/3.0/[2.0]
-Matrix Compiler2: 4.38 KB object code size  1.6/2.6/[1.5]
+Matrix Compiler1: 4.07 KB object code size  5.1/3.2/[1.4]
+Matrix Compiler2: 4.70 KB object code size  2.1/2.6/[1.4]
 

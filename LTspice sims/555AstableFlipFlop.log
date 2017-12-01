@@ -1,21 +1,23 @@
 Circuit: * C:\Electronics Trunk\Boost Converter\Boost_Converter-\LTspice sims\555AstableFlipFlop.asc
 
+WARNING: Less than two connections to node VCC.  This node is used by R3.
 Direct Newton iteration for .op point succeeded.
+Heightened Def Con from 0.0262625 to 0.0262625
 
-Date: Sun Nov 19 17:13:23 2017
-Total elapsed time: 0.634 seconds.
+Date: Mon Nov 27 14:45:38 2017
+Total elapsed time: 1.976 seconds.
 
 tnom = 27
 temp = 27
 method = modified trap
-totiter = 56286
-traniter = 56281
-tranpoints = 12782
-accept = 10247
-rejected = 2535
-matrix size = 15
+totiter = 174736
+traniter = 174731
+tranpoints = 35882
+accept = 27684
+rejected = 8199
+matrix size = 14
 fillins = 0
 solver = Normal
-Matrix Compiler1: 452 bytes object code size  0.8/0.3/[0.2]
-Matrix Compiler2: 887 bytes object code size  0.4/0.5/[0.3]
+Matrix Compiler1: 402 bytes object code size  0.7/0.2/[0.2]
+Matrix Compiler2: 814 bytes object code size  0.5/0.5/[0.2]
 
